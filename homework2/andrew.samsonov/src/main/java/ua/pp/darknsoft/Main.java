@@ -17,6 +17,8 @@ public class Main {
         ApplicationContext app2 = new AnnotationConfigApplicationContext("ua.pp.darknsoft");
         BookStoreService bookStoreService = app2.getBean("bookStoreServiceImpl", BookStoreService.class);
 
+        bookStoreService.printAllBuyers();
+
         System.out.println(bookStoreService.byuBook(null));
         System.out.println(bookStoreService.byuBook(book));
 

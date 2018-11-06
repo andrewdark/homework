@@ -13,7 +13,8 @@ public class JavaConfig {
     @Bean
     @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
     public Buyer buyer() {
-        return new Buyer(buyerCounter++, "firstName" + buyerCounter, "lastName" + buyerCounter);
+        buyerCounter++;
+        return new Buyer(buyerCounter, "firstName" + buyerCounter, "lastName" + buyerCounter);
     }
 
 
